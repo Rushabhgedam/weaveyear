@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/weaveyear/static/css/main.51a0696c.css",
+    "main.js": "/weaveyear/static/js/main.59da401f.js",
+    "static/js/453.056b8ab1.chunk.js": "/weaveyear/static/js/453.056b8ab1.chunk.js",
+    "index.html": "/weaveyear/index.html",
+    "main.51a0696c.css.map": "/weaveyear/static/css/main.51a0696c.css.map",
+    "main.59da401f.js.map": "/weaveyear/static/js/main.59da401f.js.map",
+    "453.056b8ab1.chunk.js.map": "/weaveyear/static/js/453.056b8ab1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.51a0696c.css",
+    "static/js/main.59da401f.js"
+  ]
+}
