@@ -233,6 +233,14 @@ const CalendarPreview: React.FC<CalendarPreviewProps> = ({ customizations, defer
         </button>
       </div>
 
+      {/* Monthly Goal Display */}
+      {monthData.monthlyTask && (
+        <div className="monthly-goal-header">
+          <div className="monthly-badge">Monthly Goal</div>
+          <div className="monthly-text">{monthData.monthlyTask}</div>
+        </div>
+      )}
+
       <div className="calendar-grid">
         <div className="calendar-weekdays">
           {['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map(day => (
@@ -258,20 +266,10 @@ const CalendarPreview: React.FC<CalendarPreviewProps> = ({ customizations, defer
               {/* Week Days */}
               <div className="calendar-week">
                 {week.map((day: DayData, dayIndex: number) => {
-                  // Empty cell - use for monthly reminders
+                  // Empty cell
                   if (day.dayOfMonth === 0) {
-                    // Show monthly task in first empty cell
-                    const isFirstEmptyCell = weekIndex === 0 && dayIndex === week.findIndex(d => d.dayOfMonth === 0);
-                    const showMonthlyReminder = isFirstEmptyCell && monthData.monthlyTask;
-
                     return (
-                      <div key={dayIndex} className={`calendar-day empty-cell ${showMonthlyReminder ? 'monthly-reminder' : ''}`}>
-                        {showMonthlyReminder && (
-                          <div className="monthly-reminder-content">
-                            <div className="monthly-badge">Monthly</div>
-                            <div className="monthly-text">{monthData.monthlyTask}</div>
-                          </div>
-                        )}
+                      <div key={dayIndex} className="calendar-day empty-cell">
                       </div>
                     );
                   }
