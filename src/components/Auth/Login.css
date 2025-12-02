@@ -1,0 +1,140 @@
+
+/* Page layout */
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, #f7fbff 0%, #ffffff 30%);
+  color: #222;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+/* Hero section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 64px 20px;
+  min-height: 60vh;
+}
+
+.hero-inner {
+  max-width: 900px;
+  width: 100%;
+  text-align: center;
+  padding: 40px;
+}
+
+.hero-inner h1 {
+  margin: 0 0 14px 0;
+  color: #111827;
+  font-size: 36px;
+  line-height: 1.05;
+}
+
+.subtitle {
+  color: #4b5563;
+  margin: 0 auto 24px auto;
+  font-size: 16px;
+  max-width: 680px;
+}
+
+.hero-action {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* center the button in the hero */
+  margin-top: 18px;
+}
+
+/* Sign-in button styling */
+.google-sign-in-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 12px 18px;
+  background: #fff;
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #202124;
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+  box-shadow: 0 1px 2px rgba(16,24,40,0.04);
+}
+
+.google-sign-in-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(16,24,40,0.08);
+}
+
+.google-sign-in-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.google-icon {
+  width: 20px;
+  height: 20px;
+  flex: none;
+}
+
+.error-message {
+  background: #fff1f2;
+  color: #a50b0b;
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin: 12px auto 0 auto;
+  font-size: 14px;
+  max-width: 640px;
+}
+
+.privacy-note {
+  margin-top: 14px;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* Features section */
+.features {
+  padding: 36px 20px 64px 20px;
+  border-top: 1px solid rgba(15,23,42,0.04);
+}
+
+.features-inner {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.features h2 {
+  margin: 0 0 18px 0;
+  font-size: 22px;
+  color: #0f172a;
+}
+
+.features ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 12px 24px;
+}
+
+.features li {
+  background: #fff;
+  padding: 14px 16px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(16,24,40,0.04);
+  color: #374151;
+  font-size: 14px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 640px) {
+  .hero-inner h1 { font-size: 28px; }
+  .subtitle { font-size: 14px; }
+  .features ul { grid-template-columns: 1fr; }
+}
+

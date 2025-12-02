@@ -1,0 +1,127 @@
+.google-calendar-sync {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.sync-info {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-primary);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.sync-info p {
+  margin: 0 0 12px 0;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.sync-info ul {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--text-secondary);
+}
+
+.sync-info li {
+  margin-bottom: 6px;
+}
+
+.reminder-time-note {
+  margin-top: 12px;
+  font-size: 14px;
+  color: var(--text-primary);
+}
+
+.sync-btn {
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #34a853 0%, #2d8f47 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 20px rgba(52, 168, 83, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.sync-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.sync-btn:hover::before {
+  left: 100%;
+}
+
+.sync-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(52, 168, 83, 0.5);
+}
+
+.sync-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.error-message {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #fca5a5;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.success-message {
+  background: rgba(52, 168, 83, 0.1);
+  border: 1px solid rgba(52, 168, 83, 0.3);
+  color: #86efac;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.sync-note {
+  background: rgba(236, 72, 153, 0.1);
+  border: 1px solid rgba(236, 72, 153, 0.2);
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.sync-note p {
+  margin: 0 0 10px 0;
+}
+
+.sync-note ol {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.sync-note li {
+  margin-bottom: 4px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
